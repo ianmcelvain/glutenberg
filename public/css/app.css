@@ -586,6 +586,12 @@ video {
 .w-auto {
   width: auto;
 }
+.w-full {
+  width: 100%;
+}
+.max-w-3xl {
+  max-width: 48rem;
+}
 .max-w-6xl {
   max-width: 72rem;
 }
@@ -629,6 +635,9 @@ video {
 }
 .rounded-lg {
   border-radius: 0.5rem;
+}
+.border {
+  border-width: 1px;
 }
 .border-r {
   border-right-width: 1px;
@@ -693,6 +702,9 @@ video {
 }
 .stroke-red-500 {
   stroke: #ef4444;
+}
+.p-4 {
+  padding: 1rem;
 }
 .p-6 {
   padding: 1.5rem;
