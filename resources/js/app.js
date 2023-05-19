@@ -9,6 +9,8 @@ import IsolatedBlockEditor, {
     // CollaborativeEditing
 } from '@automattic/isolated-block-editor';
 
+import '@automattic/isolated-block-editor/build-browser/isolated-block-editor.css';
+
 const settings = {
     //
 }
