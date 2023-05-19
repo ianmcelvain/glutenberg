@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom/client';
 import IsolatedBlockEditor, {
     EditorLoaded,
     DocumentSection,
-    ToolbarSlot,
+    ToolbarSlot, initializeEditor,
     // CollaborativeEditing
 } from '@automattic/isolated-block-editor';
 
@@ -26,3 +26,5 @@ root.render(
     >
     </IsolatedBlockEditor>
 );
+
+initializeEditor();
