@@ -27,4 +27,32 @@ root.render(
     </IsolatedBlockEditor>
 );
 
-initializeEditor();
+// initializeEditor();
+
+// function attachEditor( textarea, userSettings = {} ) {
+//     // Check it's a textarea
+//     if ( textarea.type.toLowerCase() !== 'textarea' ) {
+//         return;
+//     }
+//
+//     // Create a node after the textarea
+//     const editor = document.createElement( 'div' );
+//     editor.classList.add( 'editor' );
+//
+//     // Insert after the textarea, and hide it
+//     // @ts-ignore
+//     textarea.parentNode.insertBefore( editor, textarea.nextSibling );
+//     textarea.style.display = 'none';
+//
+//     // Render the editor
+//     editor.render(
+//         <IsolatedBlockEditor
+//             settings={ { ...settings, ...userSettings } }
+//             onLoad={ ( parser, rawHandler ) => onLoad( textarea.value, parser, rawHandler ) }
+//             onSaveContent={ ( content ) => saveBlocks( content, textarea ) }
+//             onError={ () => document.location.reload() }
+//         ></IsolatedBlockEditor>
+//     );
+// }
+//
+// attachEditor(document.querySelector( '#editor' ), settings);
