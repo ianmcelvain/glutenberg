@@ -69,6 +69,7 @@
         "@wordpress/viewport": "5.8.0",
         "@wordpress/warning": "2.31.0",
         "@wordpress/wordcount": "3.31.0",
+        "lodash": "^4.17.21",
         "postcss": "^8.4.23",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
