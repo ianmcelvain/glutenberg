@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import * as blocks from './index';
+// import * as blocks from './index';
 
 export default class BlockEditor {
     constructor(wp, editorEl) {
@@ -71,7 +71,7 @@ export default class BlockEditor {
 
 
     init = () => {
-        _.forOwn(blocks, this.registerBlock);
+        // _.forOwn(blocks, this.registerBlock);
         // _.forOwn(formats, this.registerFormat);
         this.wp.attachEditor(this.editorEl, this.editorSettings);
     }
