@@ -1,12 +1,15 @@
+import BlockEditor from './blocks/block-editor';
 import './bootstrap';
+
+const editor = new BlockEditor(window.wp, document.getElementById( 'editor' ));
+editor.init();
+
 // import React from 'react';
 // import ReactDOM from 'react-dom';
 // import BlockEditor from './components/BlockEditor';
 //
 // const blockEditor = new BlockEditor(wp, document.querySelector('#editor'));
 // blockEditor.init();
-
-console.log('RAN');
 
 // import IsolatedBlockEditor, {
 //     EditorLoaded,
