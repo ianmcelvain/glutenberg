@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/sandbox', function () {
-    return view('sandbox');
+Route::get('/sandbox-module', function () {
+    return view('sandbox-module');
+});
+
+Route::get('/sandbox-browser', function () {
+    return view('sandbox-browser');
 });
