@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/sandbox', function () {
     return view('sandbox');
 });
+
+Route::get('/sandbox/browser', function () {
+    return view('sandbox-browser');
+});
