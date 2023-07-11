@@ -2,30 +2,32 @@ import './bootstrap';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import IsolatedBlockEditor, {
-    EditorLoaded,
-    DocumentSection,
-    ToolbarSlot, initializeEditor,
-    // CollaborativeEditing
-} from '@automattic/isolated-block-editor';
+console.log('RAN');
 
-import '@automattic/isolated-block-editor/build-browser/isolated-block-editor.css';
+// import IsolatedBlockEditor, {
+//     EditorLoaded,
+//     DocumentSection,
+//     ToolbarSlot, initializeEditor,
+//     // CollaborativeEditing
+// } from '@automattic/isolated-block-editor';
 
-const settings = {
-    //
-}
+// import '@automattic/isolated-block-editor/build-browser/isolated-block-editor.css';
 
-const root = ReactDOM.createRoot( document.querySelector( '#editor' ) );
+// const settings = {
+//     //
+// }
 
-root.render(
-    <IsolatedBlockEditor
-        settings={ settings }
-        onSaveContent={ ( html ) => saveContent( html ) }
-        onLoad={ ( parse ) => loadInitialContent( parse ) }
-        onError={ () => document.location.reload() }
-    >
-    </IsolatedBlockEditor>
-);
+// const root = ReactDOM.createRoot( document.querySelector( '#editor' ) );
+
+// root.render(
+//     <IsolatedBlockEditor
+//         settings={ settings }
+//         onSaveContent={ ( html ) => saveContent( html ) }
+//         onLoad={ ( parse ) => loadInitialContent( parse ) }
+//         onError={ () => document.location.reload() }
+//     >
+//     </IsolatedBlockEditor>
+// );
 
 // initializeEditor();
 
