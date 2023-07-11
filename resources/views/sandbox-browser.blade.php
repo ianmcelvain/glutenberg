@@ -30,14 +30,9 @@
     </style>
 </head>
 <body class="antialiased w-full p-4">
-    <h1 class="text-3xl font-bold underline">Hello</h1>
-    <section class="flex max-w-3xl mt-4">
+    <h1 class="text-3xl font-bold underline">Glutenberg Browser Build:</h1>
+    <section>
         <textarea id="editor" class="border w-full"></textarea>
     </section>
-
-    <script>
-        console.log(window.wp);
-        wp.attachEditor( document.getElementById( 'editor' ) );
-    </script>
 </body>
 </html>
