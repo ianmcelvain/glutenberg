@@ -23,8 +23,8 @@
     </style>
 </head>
 <body class="antialiased w-full p-4">
-    <h1 class="text-3xl font-bold underline">Hello</h1>
-    <section class="flex max-w-3xl mt-4">
+    <h1 class="text-3xl font-bold underline">Glutenberg Module Build</h1>
+    <section>
         <textarea id="editor" class="border"></textarea>
     </section>
 </body>
