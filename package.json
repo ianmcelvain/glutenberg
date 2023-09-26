@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "@automattic/isolated-block-editor": "^2.24.0",
+        "@vitejs/plugin-react": "^4.1.0",
         "lodash": "^4.17.21",
         "postcss": "^8.4.23",
         "react": "^18.2.0",
