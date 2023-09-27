@@ -13,7 +13,7 @@
     
     <!-- <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <script src="{{ mix('js/app.js') }}" defer></script> -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.jsx'])
 
     <!-- Styles -->
     <style>
@@ -23,9 +23,10 @@
     </style>
 </head>
 <body class="antialiased w-full p-4">
-    <h1 class="text-3xl font-bold underline">Glutenberg Module Build</h1>
+    <h1 class="text-3xl font-bold underline">Glutenberg Module</h1>
     <section>
         <textarea id="editor" class="border"></textarea>
     </section>
+    <div id="test-root"></div>
 </body>
 </html>
