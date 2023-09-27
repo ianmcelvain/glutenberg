@@ -18,10 +18,8 @@
     <link rel="stylesheet" href="{{asset('css/core.css')}}">
     <link rel="stylesheet" href="{{asset('css/isolated-block-editor.css')}}">
 
-{{--    @vite(['resources/css/app.css', 'resources/js/app.js'])--}}
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    <script src="{{ mix('js/app.js') }}" defer></script>
-    <script src="{{ mix('js/pages/browser.js') }}" defer></script>
+    <!-- <script src="{{ mix('js/pages/browser.js') }}" defer></script> -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <!-- Styles -->
     <style>
