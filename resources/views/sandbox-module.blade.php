@@ -22,11 +22,7 @@
         }
     </style>
 </head>
-<body class="antialiased w-full p-4">
-    <h1 class="text-3xl font-bold underline">Glutenberg Module</h1>
-    <section>
-        <textarea id="editor" class="border"></textarea>
-    </section>
-    <div id="test-root"></div>
+<body>
+    <div id="root"></div>
 </body>
 </html>
