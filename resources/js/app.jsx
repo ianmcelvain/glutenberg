@@ -14,7 +14,8 @@ const saveContent = (html) => {
 
 function onLoad(content, parser, rawHandler) {
   // Does the content contain blocks?
-  if ( content.indexOf( '<!--' ) !== -1 ) {    // Parse the blocks
+  if ( content.indexOf( '<!--' ) !== -1 ) {
+    // Parse the blocks
     return parser( content );
   }
 
