@@ -38,7 +38,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <ToolbarSlot>
             <button onClick={() => alert('You did it, congratulations...')}>Click me</button>
         </ToolbarSlot>
-        <CollaborativeEditing settings={collabSettings} />
+      <CollaborativeEditing settings={{}} />
     </IsolatedBlockEditor>
   </React.StrictMode>,
 )
