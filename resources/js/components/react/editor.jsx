@@ -1,4 +1,3 @@
-import React from 'react';
 import IsolatedBlockEditor, { EditorLoaded, ToolbarSlot, CollaborativeEditing } from '@automattic/isolated-block-editor';
 import { editorSettings } from '@/constants/editor-settings';
 
