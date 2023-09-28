@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom/client'
 import IsolatedBlockEditor, { EditorLoaded, ToolbarSlot, CollaborativeEditing } from '@automattic/isolated-block-editor';
 
 import './bootstrap';
+import '../sass/editor.scss';
+import '@automattic/isolated-block-editor/build-browser/core.css';
+import '@automattic/isolated-block-editor/build-browser/isolated-block-editor.css';
 
 const settings = {
     iso: {
       footer: true,
       header: true,
-      // allowApi: false,
+      allowApi: false,
       linkMenu: [{
         title: 'Cardinal Financial',
         url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley',
@@ -43,7 +46,7 @@ const settings = {
       reusableBlocks: [],
       styles: [],
       defaultEditorStyles: [],
-      // bodyPlaceholder: '',
+      bodyPlaceholder: 'Glutenberg Module',
       // __experimentalBlockPatterns: window.wp.__experimentalBlockPatterns ?? [],
       // __experimentalBlockPatternCategories: window.wp.__experimentalBlockPatternCategories ?? []
     },
@@ -66,7 +69,7 @@ function onLoad(content, parser, rawHandler) {
   return rawHandler( { HTML: content } );
 }
 
-ReactDOM.createRoot(document.getElementById('test-root')).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <IsolatedBlockEditor
       settings={settings}
@@ -79,7 +82,7 @@ ReactDOM.createRoot(document.getElementById('test-root')).render(
             onLoading={() => { console.log('LOADING') }}
         />
         <ToolbarSlot>
-            <button>Beep!</button>
+            <button onClick={() => alert('You did it, congratulations...')}>Click me</button>
         </ToolbarSlot>
         <CollaborativeEditing settings={collabSettings} />
     </IsolatedBlockEditor>
