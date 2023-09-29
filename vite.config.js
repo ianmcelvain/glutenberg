@@ -13,6 +13,17 @@ export default defineConfig({
         }),
         react(),
     ],
+    resolve: {
+        alias: {
+            '@': '/resources/js',
+            '@css': '/resources/styles/css',
+            '@sass': '/resources/styles/sass',
+            '@constants': '/resources/js/constants',
+            '@components': '/resources/js/components',
+            '@blocks': '/resources/js/blocks',
+            '@pages': '/resources/js/pages',
+        },
+    },
     define: {
         "process.env": {},
     },
