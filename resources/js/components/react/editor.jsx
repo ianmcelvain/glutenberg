@@ -1,11 +1,15 @@
 import IsolatedBlockEditor, { EditorLoaded, ToolbarSlot, CollaborativeEditing } from '@automattic/isolated-block-editor';
-import { editorSettings } from '@/constants/editor-settings';
+import { editorSettings } from '@constants/editor-settings';
+import { registerBlockType } from '@wordpress/blocks';
+import * as blocks from '@blocks/index';
 
 import '@sass/editor.scss'
 import '@automattic/isolated-block-editor/build-browser/core.css';
 import '@automattic/isolated-block-editor/build-browser/isolated-block-editor.css';
 
 export default function Editor() {
+
+    console.log(blocks);
 
     function saveContent(html) {
         console.log("🚀 ~ file: App.jsx:12 ~ saveContent ~ html:", html)
