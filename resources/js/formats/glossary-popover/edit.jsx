@@ -1,7 +1,8 @@
 import { comment as icon } from '@wordpress/icons';
 
-const { RichTextToolbarButton } = window.wp.blockEditor;
-const { toggleFormat, getTextContent, slice } = window.wp.richText;
+import { RichTextToolbarButton } from '@wordpress/block-editor';
+import { toggleFormat, getTextContent, slice } from '@wordpress/rich-text';
+
 const type = 'cardfin/glossary-popover';
 
 export default function edit({ isActive, value, onChange, setAttributes }) {
