@@ -3413,15 +3413,6 @@
     "@wordpress/element" "^5.14.0"
     "@wordpress/primitives" "^3.35.0"
 
-"@wordpress/icons@^9.33.0":
-  version "9.33.0"
-  resolved "https://registry.yarnpkg.com/@wordpress/icons/-/icons-9.33.0.tgz#32ed6749fc9cbecf71f8737d085a128b680bad20"
-  integrity sha512-yD8b2Q21/X1riFIUBbgVh6sVhrnOYpstV9hxa4/MKesWYkyDN75KM6uaor1/tn5wyq40Shnpwxvc9kPUGI4Kgw==
-  dependencies:
-    "@babel/runtime" "^7.16.0"
-    "@wordpress/element" "^5.19.0"
-    "@wordpress/primitives" "^3.40.0"
-
 "@wordpress/interactivity@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@wordpress/interactivity/-/interactivity-1.1.0.tgz#a8942a194cc1407fe6e45deca3d441ec820cf8b0"
@@ -3544,15 +3535,6 @@
   dependencies:
     "@babel/runtime" "^7.16.0"
     "@wordpress/element" "^5.14.0"
-    classnames "^2.3.1"
-
-"@wordpress/primitives@^3.40.0":
-  version "3.40.0"
-  resolved "https://registry.yarnpkg.com/@wordpress/primitives/-/primitives-3.40.0.tgz#75bf79546cf80a57d667385abb62b2595b9da750"
-  integrity sha512-NGrcMsIKA7bBRVJPkiweOeUlnai335fyQTpwASwkpfWLbUTQ+LwKDn6hnwAsLpYot7uwflar2TPJdakglwzfIQ==
-  dependencies:
-    "@babel/runtime" "^7.16.0"
-    "@wordpress/element" "^5.19.0"
     classnames "^2.3.1"
 
 "@wordpress/priority-queue@2.37.0", "@wordpress/priority-queue@^2.37.0":
