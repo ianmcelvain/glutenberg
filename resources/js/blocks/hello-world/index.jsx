@@ -1,6 +1,6 @@
 import React from 'react';
-import { hello as icon } from '../icons';
-import MySimpleComponent from '../../components/react/my-simple-component';
+import { warning as icon } from '@wordpress/icons';
+import MySimpleComponent from '@components/react/my-simple-component';
 
 export const name = 'example-block';
 
