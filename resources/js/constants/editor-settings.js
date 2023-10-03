@@ -1,12 +1,33 @@
+import * as selectors from '@wordpress/preferences/build-module/store/selectors';
+import * as actions from '@wordpress/preferences/build-module/store/actions';
+import reducer from '@wordpress/preferences/build-module/store/reducer';
+import { store as blockEditorStore } from '@wordpress/block-editor';
+
 export const editorSettings = {
     iso: {
-        footer: true,
-        header: true,
-        allowApi: false,
-        linkMenu: [{
-            title: 'Cardinal Financial',
-            url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley',
-        }],
+        // footer: true,
+        // header: true,
+        // allowApi: false,
+        // blocks: {
+        //     allowBlocks: [],
+        // },
+        // linkMenu: [{
+        //     title: 'Cardinal Financial',
+        //     url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley',
+        // }],
+        // customStores: [
+        //     {
+        //         name: 'core/block-editor',
+        //         config: {
+        //             reducer: reducer,
+        //             selectors: selectors,
+        //             actions: actions,
+        //         },
+        //     },
+        // ],
+        // customStores: [
+        //     blockEditorStore,
+        // ],
         toolbar: {
             inserter: true,
             inspector: true,
