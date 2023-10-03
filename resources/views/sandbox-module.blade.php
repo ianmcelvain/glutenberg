@@ -13,6 +13,7 @@
     
     @viteReactRefresh
     @vite('resources/js/app.jsx')
+    @vite('resources/js/pages/editor.jsx')
 
     <!-- Styles -->
     <style>
