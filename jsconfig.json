@@ -8,7 +8,9 @@
         "@sass/*": ["./resources/styles/sass/*"],
         "@constants/*": ["./resources/js/constants/*"],
         "@components/*": ["./resources/js/components/*"],
-        "@blocks/*": ["./resources/js/blocks/*"],
+        "@editor/*": ["resources/js/editor/*"],
+        "@blocks/*": ["resources/js/editor/blocks/*"],
+        "@formats/*": ["resources/js/editor/formats/*"],
         "@pages/*": ["./resources/js/pages/*"],
       }
     }

@@ -1,10 +1,11 @@
 import { useEffect } from '@wordpress/element';
-import IsolatedBlockEditor, { EditorLoaded, ToolbarSlot, CollaborativeEditing } from '@automattic/isolated-block-editor';
+import IsolatedBlockEditor, { EditorLoaded, ToolbarSlot } from '@automattic/isolated-block-editor';
 import { editorSettings } from '@constants/editor-settings';
 import { registerBlockType } from '@wordpress/blocks';
 import { registerFormatType } from '@wordpress/rich-text';
+
 import * as blocks from '@blocks';
-import * as formats from '@/formats'
+import * as formats from '@formats';
 
 import '@sass/editor.scss'
 import '@automattic/isolated-block-editor/build-browser/core.css';
@@ -27,7 +28,6 @@ export default function Editor() {
     }
     
     useEffect(() => {
-        console.log(formats);
         // Register blocks from custom blocks module
         Object.keys(blocks)
             .forEach((key) => {
@@ -50,6 +50,13 @@ export default function Editor() {
             onLoad={(parser, rawHandler) => onLoad('', parser, rawHandler)}
             onError={() => document.location.reload()}
         >
+            <EditorLoaded
+                onLoaded={() => { console.log('🚀 Editor initialized') }}
+                onLoading={() => { console.log('⏳ Editor loading...') }}
+            />  
+            <ToolbarSlot>
+                <button>Beep!</button>
+            </ToolbarSlot>
         </IsolatedBlockEditor>
     );
 }
