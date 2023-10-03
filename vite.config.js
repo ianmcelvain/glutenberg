@@ -16,11 +16,13 @@ export default defineConfig({
     resolve: {
         alias: {
             '@': '/resources/js',
-            '@css': '/resources/styles/css',
+            '@css': '/resources/styles/css', // Having css/sass just be "styles" is best
             '@sass': '/resources/styles/sass',
             '@constants': '/resources/js/constants',
             '@components': '/resources/js/components',
-            '@blocks': '/resources/js/blocks',
+            '@editor': '/resources/js/editor',
+            '@blocks': '/resources/js/editor/blocks',
+            '@formats': '/resources/js/editor/formats',
             '@pages': '/resources/js/pages',
         },
     },
