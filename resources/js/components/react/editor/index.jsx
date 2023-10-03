@@ -5,7 +5,7 @@ import { registerBlockType } from '@wordpress/blocks';
 import { registerFormatType } from '@wordpress/rich-text';
 
 import * as blocks from '@blocks';
-import * as formats from '@formats'
+import * as formats from '@formats';
 
 import '@sass/editor.scss'
 import '@automattic/isolated-block-editor/build-browser/core.css';
@@ -28,7 +28,6 @@ export default function Editor() {
     }
     
     useEffect(() => {
-        console.log(formats);
         // Register blocks from custom blocks module
         Object.keys(blocks)
             .forEach((key) => {
