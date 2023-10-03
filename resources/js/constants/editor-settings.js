@@ -1,4 +1,3 @@
-import * as selectors from '@wordpress/preferences/build-module/store/selectors';
 export const editorSettings = {
     iso: {
         footer: true,
@@ -12,7 +11,8 @@ export const editorSettings = {
             navigation: true,
             documentInspector: true,
             toc: true,
-            undo: true,            selectorTool: true,
+            undo: true,
+            selectorTool: true,
         },
         moreMenu: {
             editor: true,
@@ -37,6 +37,18 @@ export const editorSettings = {
         defaultEditorStyles: [],
         bodyPlaceholder: 'Glutenberg Module',
         // __experimentalBlockPatterns: window.wp.__experimentalBlockPatterns ?? [],
-        // __experimentalBlockPatternCategories: window.wp.__experimentalBlockPatternCategories ?? []
+        // __experimentalBlockPatternCategories: window.wp.__experimentalBlockPatternCategories ?? [],
+        mediaUpload: ({ filesList, onFileChange }) => {
+            setTimeout(() => {
+                const uploadedFiles = Array.from(filesList).map(file => {
+                    return {
+                        id: file.name,
+                        name: file.name,
+                        url: `https://dummyimage.com/600x400/000/fff&text=${file.name}`
+                    }
+                })
+                onFileChange(uploadedFiles)
+            }, 1000)
+        },
     },
 };
