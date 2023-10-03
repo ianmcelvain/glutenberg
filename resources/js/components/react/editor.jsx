@@ -1,7 +1,8 @@
+import { useEffect } from '@wordpress/element';
 import IsolatedBlockEditor, { EditorLoaded, ToolbarSlot, CollaborativeEditing } from '@automattic/isolated-block-editor';
 import { editorSettings } from '@constants/editor-settings';
 import { registerBlockType } from '@wordpress/blocks';
-import * as blocks from '@blocks/index';
+import * as blocks from '@blocks';
 
 import '@sass/editor.scss'
 import '@automattic/isolated-block-editor/build-browser/core.css';
@@ -23,11 +24,14 @@ export default function Editor() {
         return rawHandler( { HTML: content } );
     }
     
-    Object.keys(blocks)
-        .forEach((key) => {
-            const { name, settings } = blocks[key];
-            registerBlockType(`cardinal-financial/${name}`, settings)
-        });
+    useEffect(() => {
+        // Register blocks from custom blocks module
+        Object.keys(blocks)
+            .forEach((key) => {
+                const { name, settings } = blocks[key];
+                registerBlockType(`cardinal-financial/${name}`, settings)
+            });
+    }, []);
 
     return (
         <IsolatedBlockEditor
