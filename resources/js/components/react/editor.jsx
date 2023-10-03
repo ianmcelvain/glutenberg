@@ -1,12 +1,14 @@
+import { useEffect } from '@wordpress/element';
 import IsolatedBlockEditor, { EditorLoaded, ToolbarSlot, CollaborativeEditing } from '@automattic/isolated-block-editor';
-import { editorSettings } from '@/constants/editor-settings';
+import { editorSettings } from '@constants/editor-settings';
+import { registerBlockType } from '@wordpress/blocks';
+import * as blocks from '@blocks';
 
 import '@sass/editor.scss'
 import '@automattic/isolated-block-editor/build-browser/core.css';
 import '@automattic/isolated-block-editor/build-browser/isolated-block-editor.css';
 
 export default function Editor() {
-
     function saveContent(html) {
         console.log("🚀 ~ file: App.jsx:12 ~ saveContent ~ html:", html)
     }
@@ -21,6 +23,15 @@ export default function Editor() {
         // Raw HTML - do our best
         return rawHandler( { HTML: content } );
     }
+    
+    useEffect(() => {
+        // Register blocks from custom blocks module
+        Object.keys(blocks)
+            .forEach((key) => {
+                const { name, settings } = blocks[key];
+                registerBlockType(`cardinal-financial/${name}`, settings)
+            });
+    }, []);
 
     return (
         <IsolatedBlockEditor
@@ -29,14 +40,6 @@ export default function Editor() {
             onLoad={(parser, rawHandler) => onLoad('', parser, rawHandler)}
             onError={() => document.location.reload()}
         >
-            <EditorLoaded
-                onLoaded={() => { console.log('LOADED') }}
-                onLoading={() => { console.log('LOADING') }}
-            />
-            <ToolbarSlot>
-                <button onClick={() => alert('You did it, congratulations...')}>Click me</button>
-            </ToolbarSlot>
-            <CollaborativeEditing settings={{}} />
         </IsolatedBlockEditor>
     );
 }
