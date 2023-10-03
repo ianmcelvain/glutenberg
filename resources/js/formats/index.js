@@ -1,0 +1,1 @@
+export * as glossaryPopover  from './glossary-popover';
