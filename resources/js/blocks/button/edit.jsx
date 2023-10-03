@@ -11,13 +11,13 @@ import {button} from "@wordpress/icons";
 import React from "react";
 import {useRef} from "@wordpress/element";
 
-const {
+import {
     useBlockProps,
     InspectorControls,
     PanelColorSettings,
     RichText,
     __experimentalGetElementClassName
-} = window.wp.blockEditor;
+} from '@wordpress/block-editor';
 
 export default function edit({ attributes, setAttributes }) {
     const {
