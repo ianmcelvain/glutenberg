@@ -2,7 +2,9 @@ import { useEffect } from '@wordpress/element';
 import IsolatedBlockEditor, { EditorLoaded, ToolbarSlot, CollaborativeEditing } from '@automattic/isolated-block-editor';
 import { editorSettings } from '@constants/editor-settings';
 import { registerBlockType } from '@wordpress/blocks';
+import { registerFormatType } from '@wordpress/rich-text';
 import * as blocks from '@blocks';
+import * as formats from '@/formats'
 
 import '@sass/editor.scss'
 import '@automattic/isolated-block-editor/build-browser/core.css';
@@ -25,11 +27,19 @@ export default function Editor() {
     }
     
     useEffect(() => {
+        console.log(formats);
         // Register blocks from custom blocks module
         Object.keys(blocks)
             .forEach((key) => {
                 const { name, settings } = blocks[key];
                 registerBlockType(`cardinal-financial/${name}`, settings)
+            });
+        
+        // Register formats from custom module
+        Object.keys(formats)
+            .forEach((key) => {
+                const { name, settings } = formats[key];
+                registerFormatType(`cardinal-financial/${name}`, settings)
             });
     }, []);
 

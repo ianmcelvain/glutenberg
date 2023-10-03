@@ -1,5 +1,6 @@
 import _ from 'lodash';
 // import * as blocks from './index';
+// import * as formats from '../formats/index';
 
 export default class BlockEditor {
     constructor(wp, editorEl) {
