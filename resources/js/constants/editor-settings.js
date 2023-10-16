@@ -1,9 +1,9 @@
 export const editorSettings = {
     iso: {
-        footer: true,
-        header: true,
+        // footer: true,
+        // header: true,
         blocks: {
-            allowBlocks: [],
+            disallowBlocks: ['core/paragraph']
         },
         toolbar: {
             inserter: true,
@@ -29,7 +29,7 @@ export const editorSettings = {
         hasUploadPermissions: true,
         allowedMimeTypes: [],
         allowedBlockTypes: [],
-        hasFixedToolbar: true,
+        hasFixedToolbar: false,
         template: null,
         templateLock: null,
         reusableBlocks: [],
